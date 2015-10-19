@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as
         NSArray
         let documentDirectory = paths.objectAtIndex(0) as! NSString
-        let filePath = documentDirectory.stringByAppendingPathComponent("token.plist")
+        let filePath = documentDirectory.stringByAppendingPathComponent("to.plist")
         //要写入的dictory
         var dict:NSMutableDictionary = [HttpHeaderKey:HttpHeaderValue]
         //将dict写入token.plist
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     func loadData(){
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths.objectAtIndex(0) as! NSString
-        let path = documentsDirectory.stringByAppendingPathComponent("token.plist")
+        let path = documentsDirectory.stringByAppendingPathComponent("to.plist")
         
         let resultDictionary = NSMutableDictionary(contentsOfFile: path)
         print("Loaded GameData.plist file is --> \(resultDictionary?.description)")
